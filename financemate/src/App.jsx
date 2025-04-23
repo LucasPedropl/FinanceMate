@@ -7,18 +7,27 @@ import Principal from './components/principal';
 const Container = styled.div`
     display: flex;
     flex-direction: row;
-    width: 100%;
 
+    height: 100vh;
 `
+
+const Separacao = styled.div`
+	margin-top: 80px;
+	width: 100%;
+
+    margin-left: 80px;
+`;
 
 function App() {
 	return (
 		<>
 			<Cabecalho />
 			<Container>
-                <MenuHamburguer/>
-                <Principal/>
-            </Container>
+				<MenuHamburguer />
+				<Separacao>
+					<Principal />
+				</Separacao>
+			</Container>
 		</>
 	);
 }

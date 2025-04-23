@@ -3,25 +3,32 @@ import CardSaldo from './CardSaldo';
 import CardGrafico from './CardGrafico';
 
 const Cartao = styled.div`
-	width: 300px;
+	width: 24%;
 	background: #fff;
-	border-radius: 20px;
+	border-radius: 5px;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 	display: flex;
-	justify-content: space-between;
 	flex-direction: column;
-	height: 300px;
+	height: 40vh;
 	border: 1px solid rgb(214, 214, 214);
+	div {
+		justify-content: space-between;
+		display: flex;
+		height: 100%;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
 `;
 
-const Titulo = styled.div`
+const Titulo = styled.p`
 	background-color: rgb(230, 230, 230);
 	font-size: 25px;
 	border-bottom: 1px solid rgb(214, 214, 214);
 	width: 100%;
 	height: 15%;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	text-align: center;
 	justify-content: center;
 	display: flex;
@@ -40,7 +47,7 @@ const Card = ({ tipo, titulo, valor }) => {
 		return (
 			<Cartao>
 				<Titulo>{titulo}</Titulo>
-				<CardSaldo valor={valor} />
+				<CardSaldo valor={valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })} />
 			</Cartao>
 		);
 	}
@@ -57,7 +64,7 @@ const Card = ({ tipo, titulo, valor }) => {
 		<Cartao>
 			<Titulo>{titulo}</Titulo>
 			<div>
-				<h1>R$ {valor}</h1>
+				<h1>R$ {valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</h1>
 			</div>
 		</Cartao>
 	);

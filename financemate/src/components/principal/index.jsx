@@ -1,42 +1,42 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Card from "../cards";
-import CadastroArea from "../cadastrosArea";
-import Tabela from "../tabela";
+import Card from '../cards';
+import CadastroArea from '../cadastrosArea';
+import Tabela from '../tabela';
 
 const Container = styled.div`
-    display: flex;
-    width: 100%;
-    margin: 20px;
-    flex-direction: column;
-    gap: 30px;
-`
+	display: flex;
+	margin: 20px;
+	flex-direction: column;
+	gap: 30px;
+`;
 const Cards = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-`
+	display: flex;
+	gap: 30px;
+`;
 
 const TabelaCadastro = styled.div`
-    display: flex;
-    flex-direction: row;
-`
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	justify-content: space-between;
+`;
 
 const Principal = () => {
-    return (
+	return (
 		<Container>
 			<Cards>
 				<Card titulo={'Receita do Mês'} />
-				<Card titulo={'Despesa do Mês'} tipo={'despesa'} valor={'50'}/>
+				<Card titulo={'Despesa do Mês'} tipo={'despesa'} valor={'50'} />
 				<Card titulo={'Saldo'} tipo={'saldo'} />
 				<Card titulo={'Receitas VS Despesas'} tipo={'grafico'} />
 			</Cards>
-            <TabelaCadastro>
-                <CadastroArea/>
-                <Tabela/>
-            </TabelaCadastro>
+			<TabelaCadastro>
+				<CadastroArea />
+				<Tabela />
+			</TabelaCadastro>
 		</Container>
-    );
-}
+	);
+};
 
 export default Principal;

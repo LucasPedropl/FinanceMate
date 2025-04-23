@@ -2,12 +2,15 @@ import styled from 'styled-components';
 
 const BarraLateral = styled.div`
 	background-color: #333;
-	height: calc(100vh - 63px);
 	width: 80px;
 	color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+	position: fixed;
+	height: 100%;
+	border: 0px;
+	margin-top: 70px;
 `;
 
 const BotaoMenu = styled.button`

@@ -7,6 +7,9 @@ const Header = styled.header`
 	align-items: center;
 	padding: 10px 0px;
     justify-content: space-between;
+	position: fixed;
+	width: 100%;
+	height: 50px;
 `;
 
 const AreaLogo = styled.div`
