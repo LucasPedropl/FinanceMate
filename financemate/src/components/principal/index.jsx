@@ -26,10 +26,10 @@ const Principal = () => {
 	return (
 		<Container>
 			<Cards>
-				<Card titulo={'Receita do Mês'} />
-				<Card titulo={'Despesa do Mês'} tipo={'despesa'} valor={'50'} />
-				<Card titulo={'Saldo'} tipo={'saldo'} />
-				<Card titulo={'Receitas VS Despesas'} tipo={'grafico'} />
+				<Card titulo={'Receita do Mês'} tipo={'Receita'} />
+				<Card titulo={'Despesa do Mês'} tipo={'Despesa'} />
+				<Card titulo={'Saldo'} tipo={'Saldo'} />
+				<Card titulo={'Receitas VS Despesas'} tipo={'Grafico'} />
 			</Cards>
 			<TabelaCadastro>
 				<CadastroArea />

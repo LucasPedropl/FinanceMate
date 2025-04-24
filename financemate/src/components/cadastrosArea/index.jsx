@@ -2,28 +2,40 @@ import styled from 'styled-components';
 import BotaoCadastro from './botaoCadastro';
 
 const BtnCadastros = styled.div`
-	width: 100%;
 	background-color: rgb(250, 250, 250);
-	border-radius: 20px;
+	padding: 20px;
+	border-radius: 5px;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 	display: flex;
-	justify-content: space-around;
+	margin-bottom: 30px;
 	align-items: center;
-	flex-direction: row;
-	width: 100%;
-	height: 200px;
+	flex-direction: column;
 	border: 1px solid rgb(214, 214, 214);
-	gap: 30px;
-	height: 25vh;
+	div {
+		display: flex;
+		justify-content: space-around;
+		gap: 30px;
+		width: 100%;
+	}
+`;
+
+
+const Titulo = styled.span`
+	font-size: 30px;
+	color: #7a7a7a;
+	margin-bottom: 20px;
 `;
 
 const CadastroArea = () => {
 	return (
 		<BtnCadastros>
-			<BotaoCadastro tipo="Receita" />
-			<BotaoCadastro tipo="Despesa" />
-			<BotaoCadastro tipo="Categoria" />
-			<BotaoCadastro tipo="Banco" />
+			<Titulo>Acesso Rápido</Titulo>
+			<div>
+				<BotaoCadastro tipo="Receita" />
+				<BotaoCadastro tipo="Despesa" />
+				<BotaoCadastro tipo="Categoria" />
+				<BotaoCadastro tipo="Banco" />
+			</div>
 		</BtnCadastros>
 	);
 };

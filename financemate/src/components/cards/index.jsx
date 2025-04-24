@@ -15,9 +15,17 @@ const Cartao = styled.div`
 		justify-content: space-between;
 		display: flex;
 		height: 100%;
+		flex-direction: column;
 		text-align: center;
 		justify-content: center;
 		align-items: center;
+	}
+	h1 {
+		height: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 50px;
 	}
 `;
 
@@ -36,14 +44,20 @@ const Titulo = styled.p`
 	color: #7a7a7a;
 `;
 
+const Container = styled.main`
+	display: flex;
+	flex-direction: column;
+	height: 50%;
+`
+
 const Card = ({ tipo, titulo, valor }) => {
 	if (!valor) {
 		valor = 0.0;
 	}
-	if (tipo === 'despesa') {
+	if (tipo === 'Despesa') {
 		valor = valor - valor - valor;
 	}
-	if (tipo === 'saldo') {
+	if (tipo === 'Saldo') {
 		return (
 			<Cartao>
 				<Titulo>{titulo}</Titulo>
@@ -52,7 +66,7 @@ const Card = ({ tipo, titulo, valor }) => {
 		);
 	}
 
-	if (tipo === 'grafico') {
+	if (tipo === 'Grafico') {
 		return (
 			<Cartao>
 				<Titulo>{titulo}</Titulo>
@@ -65,6 +79,12 @@ const Card = ({ tipo, titulo, valor }) => {
 			<Titulo>{titulo}</Titulo>
 			<div>
 				<h1>R$ {valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</h1>
+				<Container>
+					<span>Menor {tipo}</span>
+					<p>-</p>
+					<span>Maior {tipo}</span>
+					<p>-</p>
+				</Container>
 			</div>
 		</Cartao>
 	);
