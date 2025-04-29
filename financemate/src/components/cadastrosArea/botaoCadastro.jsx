@@ -31,26 +31,26 @@ const Botao = styled.button`
     }
 `;
 
-const BotaoCadastro = ({ tipo }) => {
-    // Define o ícone com base no tipo
-    let icone;
-    if (tipo === 'Receita') {
-        icone = 'bi bi-plus-circle';
-    } else if (tipo === 'Despesa') {
-        icone = 'bi bi-dash-circle';
-    } else if (tipo === 'Categoria') {
-        icone = 'bi bi-flag';
-    } else if (tipo === 'Banco') {
-        icone = 'bi bi-bank';
-    } else {
-        icone = 'bi bi-bell';
-    }
+const BotaoCadastro = ({ tipo, onClick }) => {
+	// Define o ícone com base no tipo
+	let icone;
+	if (tipo === 'Receita') {
+		icone = 'bi bi-plus-circle';
+	} else if (tipo === 'Despesa') {
+		icone = 'bi bi-dash-circle';
+	} else if (tipo === 'Categoria') {
+		icone = 'bi bi-flag';
+	} else if (tipo === 'Banco') {
+		icone = 'bi bi-bank';
+	} else {
+		icone = 'bi bi-bell';
+	}
 
-    return (
-        <Botao $tipo={tipo}>
-            <i className={icone}></i> {tipo}
-        </Botao>
-    );
+	return (
+		<Botao $tipo={tipo} onClick={onClick}>
+			<i className={icone}></i> {tipo}
+		</Botao>
+	);
 };
 
 export default BotaoCadastro;

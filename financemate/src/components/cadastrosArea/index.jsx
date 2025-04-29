@@ -19,22 +19,21 @@ const BtnCadastros = styled.div`
 	}
 `;
 
-
 const Titulo = styled.span`
 	font-size: 30px;
 	color: #7a7a7a;
 	margin-bottom: 20px;
 `;
 
-const CadastroArea = () => {
+const CadastroArea = ({ onAbrirForm }) => {
 	return (
 		<BtnCadastros>
 			<Titulo>Acesso Rápido</Titulo>
 			<div>
-				<BotaoCadastro tipo="Receita" />
-				<BotaoCadastro tipo="Despesa" />
-				<BotaoCadastro tipo="Categoria" />
-				<BotaoCadastro tipo="Banco" />
+				<BotaoCadastro tipo="Receita" onClick={() => onAbrirForm('Receita')} />
+				<BotaoCadastro tipo="Despesa" onClick={() => onAbrirForm('Despesa')} />
+				<BotaoCadastro tipo="Categoria" onClick={() => onAbrirForm('Categoria')} />
+				<BotaoCadastro tipo="Banco" onClick={() => onAbrirForm('Banco')} />
 			</div>
 		</BtnCadastros>
 	);

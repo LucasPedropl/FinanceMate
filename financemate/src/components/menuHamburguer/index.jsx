@@ -36,7 +36,7 @@ const MenuContainer = styled.div`
     background-color: #ffffff;
     height: 100%;
     position: fixed;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra na borda direita */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     opacity: ${(props) => (props.$isVisible ? 1 : 0)};
     transform: ${(props) => (props.$isVisible ? 'translateX(0)' : 'translateX(-100%)')};
     transition: opacity 0.3s ease, transform 0.3s ease;

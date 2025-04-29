@@ -27,7 +27,6 @@ const FotoPerfil = styled.div`
 	border-radius: 50%;
 	width: 120px;
 	height: 120px;
-	border: 1px solid red;
 	margin-bottom: 10px;
 `;
 
@@ -52,7 +51,7 @@ const MenuLateral = ({ onClose }) => {
         <Menu>
             <Perfil>
                 <FotoPerfil>
-                    <img src="" alt="" />
+                    <img />
                 </FotoPerfil>
                 <TextoPerfil>Bem Vindo</TextoPerfil>
             </Perfil>

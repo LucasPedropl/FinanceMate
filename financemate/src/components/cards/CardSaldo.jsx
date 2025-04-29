@@ -26,7 +26,7 @@ const CardSaldo = ({ valor }) => {
 		<Content>
 			<h1>R$ {valor}</h1>
 
-			<i class="bi bi-currency-exchange"></i>
+			<i className="bi bi-currency-exchange"></i>
 		</Content>
 	);
 };
